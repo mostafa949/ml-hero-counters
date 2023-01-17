@@ -7,7 +7,7 @@
           <v-combobox
             v-model="selectedHeroes"
             :items="heroes"
-            item-title="name.en"
+            item-title="title"
             item-value="id"
             label="I use a scoped slot"
             multiple
@@ -22,14 +22,14 @@
                 @click:close="data.parent.selectItem(data.item)"
               >
                 <template v-slot:prepend>
-                  <v-avatar left>
+                  <!-- <v-avatar left>
                     <v-img :src="data.item.value.image"></v-img>
-                  </v-avatar>
-                  <!-- <v-avatar class="bg-accent text-uppercase" start>{{
-                    data.item.value.name.ar
-                  }}</v-avatar> -->
+                  </v-avatar> -->
+                  <v-avatar class="bg-accent text-uppercase" start>{{
+                    data.item.value.title
+                  }}</v-avatar>
                 </template>
-                {{ data.item.value.name.ar }}
+                {{ data.item.value.title }}
               </v-chip>
             </template>
           </v-combobox>
@@ -44,7 +44,9 @@ import { storeToRefs } from "pinia";
 
 const heroesStore = useHeroesStore();
 const selectedHeroes = ref([]);
-const { data: heroes } = await useFetch("http://localhost:8000/api/heroes");
+const { data: heroes } = await useFetch(
+  "https://jsonplaceholder.typicode.com/posts"
+);
 // const { heroes, test } = storeToRefs(heroesStore);
 // const { fetchHeroes } = heroesStore;
 // onMounted(() => {
