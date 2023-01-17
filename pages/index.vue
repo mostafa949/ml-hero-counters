@@ -46,7 +46,7 @@ const heroesStore = useHeroesStore();
 const selectedHeroes = ref([]);
 const { data: heroes } = await useFetch("http://localhost:8000/api/heroes");
 // const { heroes, test } = storeToRefs(heroesStore);
-const { fetchHeroes } = heroesStore;
+// const { fetchHeroes } = heroesStore;
 // onMounted(() => {
 //   fetchHeroes();
 // }),
