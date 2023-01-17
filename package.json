@@ -12,14 +12,14 @@
     "nuxt": "^3.0.0"
   },
   "overrides": {
-    "vue": "latest"
+    "vue": "latest",
+    "vue-i18n": "^9.3.0-beta.14"
   },
   "dependencies": {
     "@mdi/font": "^7.1.96",
     "@pinia/nuxt": "^0.4.6",
     "pinia": "^2.0.28",
     "sass": "^1.57.1",
-    "vue-i18n": "^9.3.0-beta.7",
     "vuetify": "^3.1.1"
   }
 }

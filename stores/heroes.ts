@@ -11,7 +11,7 @@ export const useHeroesStore = defineStore('heroes', {
     actions: {
         async fetchHeroes() {
             try {
-                this.heroes = await useFetch("http://localhost:8000/api/heroes");
+                // this.heroes = await useFetch("http://localhost:8000/api/heroes");
 
             } catch (error) {
                 console.log(error)
